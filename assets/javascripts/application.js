@@ -6,9 +6,11 @@ function authenticate() {
   if (getCookie("id")) {
     document.getElementById("logout").classList.remove("hidden");
     document.getElementById("login").classList.add("hidden");
+    loginPage();
   } else {
     document.getElementById("login").classList.remove("hidden");
     document.getElementById("logout").classList.add("hidden");
+    logoutPage();
   }
 
 }
