@@ -1,3 +1,18 @@
+document.addEventListener("DOMContentLoaded", function(){
+    authenticate()
+})
+
+function authenticate() {
+  if (getCookie("id")) {
+    document.getElementById("logout").classList.remove("hidden");
+    document.getElementById("login").classList.add("hidden");
+  } else {
+    document.getElementById("login").classList.remove("hidden");
+    document.getElementById("logout").classList.add("hidden");
+  }
+
+}
+
 function login() {
   event.preventDefault();
   var email = document.getElementById("emailAddress");
@@ -16,6 +31,7 @@ function login() {
 
 function logout() {
   document.cookie = "id= ; expires = Fri, 05 Jan 1975 00:00:00 GMT";
+  authenticate();
 }
 
 function getCookie(name)
