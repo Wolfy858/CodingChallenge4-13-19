@@ -4,10 +4,23 @@ function login() {
   var password = document.getElementById("password");
 
   if(email.value === "Sincere@april.biz" && password.value === "password123!") {
+    document.cookie = "id=1;"
     window.location.href = "/";
   } else {
     email.value = "";
-    password.value = ''
-    alert("Incorrect credentials. Email: " + email.value + ", Password: " + password.value);
+    password.value = "";
+    document.getElementById("loginError").classList.remove("hidden");
+    email.focus();
   }
+}
+
+function logout() {
+  document.cookie = "id= ; expires = Fri, 05 Jan 1975 00:00:00 GMT";
+}
+
+function getCookie(name)
+{
+  var re = new RegExp(name + "=([^;]+)");
+  var value = re.exec(document.cookie);
+  return (value != null) ? unescape(value[1]) : null;
 }

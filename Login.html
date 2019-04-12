@@ -20,13 +20,16 @@
             <a href='/Login.html' class="nav-link">Login</a>
           </li>
           <li id="logout" class="nav-item hidden">
-            <button type="button" class="btn btn-link" onclick="alert('clicked!')">Logout</button>
+            <button type="button" class="btn btn-link" onclick="logout();">Logout</button>
           </li>
         </ul>
       </div>
     </nav>
     <main class="container">
-      <div class="row margin-t-60">
+      <div id="loginError" class="alert alert-danger margin-t-30 hidden" role="alert">
+        Login Failed. Email or password is incorrect.
+      </div>
+      <div class="row margin-t-30">
         <div class="col-md">
           <h1>Login</h1>
           <form onsubmit="login()">
