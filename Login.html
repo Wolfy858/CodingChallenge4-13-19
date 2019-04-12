@@ -1,6 +1,7 @@
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/site.css"></link>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -13,9 +14,24 @@
           <li class="nav-item">
             <a class="nav-link" href="/Account.html">Account</a>
           </li>
+          <li id="login" class="nav-item">
+            <!-- <button type="button" class="btn btn-link" onclick="alert('clicked!')">Login</button> -->
+            <a href='/Login.html' class="nav-link">Login</a>
+          </li>
+          <li id="logout" class="nav-item hidden">
+            <button type="button" class="btn btn-link" onclick="alert('clicked!')">Logout</button>
+          </li>
         </ul>
       </div>
     </nav>
-    <h1>Login Page</h1>
+    <!-- <main class="container"> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <h1>Login</h1>
+        </div>
+      </div>
+    </div>
+    <!-- </main> -->
   </body>
 </html>
