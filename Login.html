@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/site.css"></link>
     <script>
       function loginPage() {}
-      function logoutPage() {}
+      function logoutPage() { }
     </script>
     <script src="assets/javascripts/application.js"></script>
   </head>
@@ -23,7 +23,7 @@
             <a href='/Login.html' class="nav-link">Login</a>
           </li>
           <li id="logout" class="nav-item hidden">
-            <button type="button" class="btn btn-link" onclick="logout();">Logout</button>
+            <button type="button" class="btn btn-link" onclick="document.getElementById('loggedOutMessage').classList.remove('hidden'); logout();">Logout</button>
           </li>
         </ul>
       </div>
@@ -31,6 +31,9 @@
     <main class="container">
       <div id="loginError" class="alert alert-danger margin-t-30 hidden" role="alert">
         Login Failed. Email or password is incorrect.
+      </div>
+      <div id="loggedOutMessage" class="alert alert-success margin-t-20 hidden" role="alert">
+        You are logged out.
       </div>
       <div class="row margin-t-30">
         <div class="col-md">
