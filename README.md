@@ -1,4 +1,4 @@
-# Engage Financial Technology coding challenge
+# Coding Challenge
 
 ## Notes
 
