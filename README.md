@@ -1,6 +1,6 @@
 # Engage Financial Technology coding challenge
 
-##Notes
+## Notes
 
 1. I have tried to build this site without the use of any technologies outside the four mentioned in the challenge instructions. The only deviation from this is the 'simplehttpweb.py' file required to serve the site. Without the use of a good backend framework, however, the site is much less DRY than I would have liked. Tools that would allow me to render HTML partials, and avoid reusing large segments of the markup, are unavailable. If I have misinterpreted this restriction, I would be happy to refactor the site with access to any additional tools I might have otherwise thought off limits.
 
