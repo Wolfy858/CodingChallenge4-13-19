@@ -22,13 +22,11 @@
               var details = JSON.parse(xhr.responseText)
               document.getElementById("name").innerHTML = details.name;
               document.getElementById("username").value = details.username;
-              document.getElementById("street").innerHTML = details.address.street;
-              document.getElementById("suite").innerHTML = details.address.suite;
-              document.getElementById("city").innerHTML = details.address.city;
-              document.getElementById("zip").innerHTML = details.address.zipcode;
-              document.getElementById("phone").innerHTML = details.phone;
-              document.getElementById("website").innerHTML = details.website;
-              document.getElementById("company").innerHTML = details.company.name;
+              document.getElementById("address").innerHTML = details.address.street + "\n" +  details.address.suite
+              + "\n" + details.address.city  + "\n" +  details.address.zipcode
+              document.getElementById("phone").value = details.phone;
+              document.getElementById("website").value = details.website;
+              document.getElementById("company").value = details.company.name;
             }
             else {
                 alert('Request failed.  Returned status of ' + xhr.status);
@@ -41,7 +39,10 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <h4 class="navbar-brand">Navbar</h4>
+      <h4 class="navbar-brand">Navbar</h4>Kulas Light
+Apt. 556
+Gwenborough
+92998-3874
       <div>
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -72,23 +73,39 @@
           <div class="form-group row">
             <label for="username" class="col-sm-2 col-form-label">Username</label>
             <div class="col-sm-10">
-              <input type="text" readonly class="form-control-plaintext" id="username">
+              <input type="text" readonly class="form-control" id="username">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="address" class="col-sm-2 col-form-label">Address</label>
+            <div class="col-sm-10">
+              <textarea type="text" readonly class="form-control"  rows=4 id="address">
+                <span id="street"></span><br>
+                <span id="suite"></span><br>
+                <span id="city"></span><br>
+                <span id="zip"></span><br>
+              </textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+            <div class="col-sm-10">
+              <input type="text" readonly class="form-control" id="phone">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="website" class="col-sm-2 col-form-label">Website</label>
+            <div class="col-sm-10">
+              <input type="text" readonly class="form-control" id="website">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="company" class="col-sm-2 col-form-label">Company</label>
+            <div class="col-sm-10">
+              <input type="text" readonly class="form-control" id="company">
             </div>
           </div>
         </form>
-
-
-
-        <details>
-          <summary>Address</summary>
-          <p><span id="street"></span></p>
-          <p><span id="suite"></span></p>
-          <p><span id="city"></span></p>
-          <p><span id="zip"></span></p>
-        </details>
-        <p>Phone: <span id="phone"></span></p>
-        <p>Website: <span id="website"></span></p>
-        <p>Company: <span id="company"></span></p>
       </div>
     </main>
   </body>
